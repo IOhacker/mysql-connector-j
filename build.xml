@@ -204,7 +204,7 @@ See also com.mysql.cj.conf.PropertyDefinitions.SYSP_* variables for other test o
 
     <property name="com.mysql.cj.build.driver.version.major" value="8" />
     <property name="com.mysql.cj.build.driver.version.minor" value="0" />
-    <property name="com.mysql.cj.build.driver.version.subminor" value="21" />
+    <property name="com.mysql.cj.build.driver.version.subminor" value="211" />
     <property name="com.mysql.cj.build.driver.version.status" value="" />
 
     <property name="com.mysql.cj.build.driver.version.series" value="${com.mysql.cj.build.driver.version.major}.${com.mysql.cj.build.driver.version.minor}" />
@@ -372,8 +372,8 @@ See also com.mysql.cj.conf.PropertyDefinitions.SYSP_* variables for other test o
 
         <exec executable="${com.mysql.cj.build.jdk.javac}"
               outputproperty="com.mysql.cj.dist.jdk.compilerVersion"
-              failonerror="true"
-              failifexecutionfails="true">
+              failonerror="false"
+              failifexecutionfails="false">
             <arg value="-version" />
         </exec>
     </target>

@@ -794,8 +794,13 @@ public class ResultSetImpl extends NativeResultset implements ResultSetInternalM
 
     @Override
     public int getInt(int columnIndex) throws SQLException {
-        Integer res = getObject(columnIndex, Integer.TYPE);
-        return res == null ? 0 : res;
+        try{
+            Integer res = getObject(columnIndex, Integer.TYPE);
+            return res == null ? 0 : res;
+        }
+        catch(Exception e){
+            return 0;
+        }
     }
 
     @Override
